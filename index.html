@@ -18,6 +18,9 @@
             padding: 0;
             background-color: white;
             color: #333;
+            min-height: 100vh; /* Ensures the body takes up full height of the viewport */
+            display: flex;
+            flex-direction: column;
         }
         /* Banner Styling */
         .banner-container {
@@ -51,6 +54,7 @@
             text-align: left;
             z-index: 1; /* Ensure content is above the banner */
             padding-top: 220px; /* Adjust padding to account for the fixed banner */
+            flex-grow: 1; /* Ensures content takes up the available space */
         }
         h1 {
             color: #2c3e50;
@@ -89,8 +93,6 @@
             text-align: center;
             padding: 10px;
             font-size: 14px;
-            position: relative;
-            bottom: 0;
             width: 100%;
         }
         footer a {
@@ -108,14 +110,6 @@
             }
             .banner-container {
                 height: 150px; /* Smaller banner on mobile */
-            }
-        }
-
-        /* Footer should only appear at the bottom when content is tall enough to require scrolling */
-        @media (max-height: 800px) {
-            footer {
-                position: absolute;
-                bottom: 0;
             }
         }
     </style>
